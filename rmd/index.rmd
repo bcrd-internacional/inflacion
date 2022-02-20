@@ -1,0 +1,37 @@
+---
+output:
+  html_document:
+    self_contained: false
+    css: style.css
+---
+
+```{r setup, include=FALSE}
+# Options
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE, fig.align = "center")
+
+# Sourcing files
+source(here::here("scripts/graficos.R"), encoding = "utf-8")
+
+```
+
+
+
+
+:::{.col-sm-6}
+
+### Inflación mensual
+```{r inflacion_mes, fig.width=4.3, fig.height=2.8}
+plotly_inflacion_mes
+```
+
+:::
+
+:::{.col-sm-6}
+
+### Inflación mensual
+```{r inflacion_12y, fig.width=4.3, fig.height=2.8}
+plotly_inflacion_12y
+```
+
+:::
+

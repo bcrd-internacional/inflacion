@@ -1,0 +1,100 @@
+/* -------------------------- Fuentes del documento ----------------------*/
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+body {
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+  color:#0F172A;
+}
+
+/* ------------- Estilos para el header del documento ----------------*/
+
+.header {
+  margin-top: 7px;
+}
+
+
+.imagen{
+  max-width: 14rem;
+  margin: auto;
+}
+
+h1 {
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.8rem;
+}
+
+h2{
+  font-weight: 500;
+   font-size: 2.3rem;   margin: 0;
+   text-align: center;
+ }
+ 
+ h3{
+  font-weight: 500;
+   font-size: 1.8rem;   
+   margin: 0;
+   text-align: center;
+ }
+
+.title > p {
+  font-size: 1.5rem; 
+  font-weight: 600;
+  color: #7f5d00;
+  text-align: center;
+  display: block;
+  margin: 2px auto;
+}
+
+.head-ruler {
+  display: block;
+  margin:0.5em auto;
+  border:3px solid #7f5d00;
+}
+
+/* ------------- Estilos para celulares ----------------*/
+
+@media only screen and (min-width: 992px) {
+  .header{
+    display: grid;
+    grid-template-columns: 200px auto;
+  } 
+  
+  h1 {
+  font-weight: 600;
+  font-size: 2.3rem;
+}
+
+h2{
+  font-weight: 500;
+   font-size: 2.3rem;
+   margin: 0;
+   text-align: center;
+ }
+
+h3 {
+  font-size: 17px;
+}
+
+.title > p {
+  font-size: 1.8rem; 
+  font-weight: 500;
+}
+
+.mobile {
+  display: none;
+}
+
+.desktop {
+  display: block;
+}
+
+p {
+  font-size: 17px;
+  line-height: 1.63;
+}
+  
+}
