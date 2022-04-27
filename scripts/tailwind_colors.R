@@ -144,7 +144,7 @@ palettes_long <- palettes_wide %>%
 
 get_tailwind_colors <- function(hue_name = 'Blue', color_intensity = c(50:900)) {
   
-  hue_name <- str_to_title(hue_name)
+  hue_name <- stringr::str_to_title(hue_name)
   
   palettes_long %>%
     dplyr::filter(hue == hue_name, intensity %in% color_intensity) %>%
@@ -152,3 +152,7 @@ get_tailwind_colors <- function(hue_name = 'Blue', color_intensity = c(50:900)) 
 }
 
 get_tailwind_colors('blue', c(900, 600))
+
+
+ggplot(data = mtcars, aes(x = wt, y = mpg)) +
+  geom_point(color = get_tailwind_colors('blue', color_intensity = 200), size = 5)

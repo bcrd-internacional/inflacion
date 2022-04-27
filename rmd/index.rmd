@@ -9,29 +9,69 @@ output:
 # Options
 knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE, fig.align = "center")
 
+library(plotly)
+library(ggplot2)
+
 # Sourcing files
-source(here::here("scripts/graficos.R"), encoding = "utf-8")
+#source(here::here("scripts/graficos.R"), encoding = "utf-8")
+
+load(here::here('data/plots_ws'))
+
+header <- function() {
+  
+  header <- glue::glue(
+'
+::: {{.header}}
+
+::: {{.imagen}}
+<img src="img/bcrd_squared.png" alt="drawing"/>
+:::
+
+::: {{.title}}
+
+<h1 class=".small">
+Informe de inflación
+<br> 
+Harold V. 
+</h1>
+
+<spam>
+{date_label(Sys.Date())}
+</spam>
+
+:::
+:::
+
+<hr class="head-ruler" style="margin:0.5em auto; border:3px solid #7f5d00;">
+'    
+  )
+  
+  return(header)
+}
 
 ```
 
+`r header()`
 
 
 
-:::{.col-sm-6}
+
+:::{.col-md-6}
 
 ### Inflación mensual
-```{r inflacion_mes, fig.width=4.3, fig.height=2.8}
-plotly_inflacion_mes
+```{r inflacion_mes, out.width='auto', out.height='300px'}
+ptly_inflacion_vm
 ```
 
 :::
 
-:::{.col-sm-6}
+:::{.col-md-6}
 
 ### Inflación mensual
-```{r inflacion_12y, fig.width=4.3, fig.height=2.8}
-plotly_inflacion_12y
+```{r inflacion_12y, out.width='auto', out.height='300px'}
+ptly_inflacion
 ```
 
 :::
+
 
